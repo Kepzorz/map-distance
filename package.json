@@ -1,0 +1,23 @@
+{
+  "name": "map-distance",
+  "description": "get google maps travel time/distance in browser or node",
+  "version": "0.0.0",
+  "repository": {
+    "url": "git://github.com/kepzorz/map-distance.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test/*.js"
+  },
+  "browser": "./lib/browser.js",
+  "dependencies": {
+    "event-emitter": "^0.3.1",
+    "load-script": "0.0.5",
+    "superagent": "^0.21.0",
+    "tape": "^3.0.3"
+  },
+  "devDependencies": {
+    "tap": "~0.2.5",
+    "tape": "*"
+  }
+}

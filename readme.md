@@ -19,6 +19,22 @@ function(err, data){
 })
 ```
 
+or for a more complex distance matrix:
+```js
+var distance = require("map-distance")
+
+distance({
+  from: ['seattle, wa', 'portland, or'],
+  to: ['san francisco, ca', 'mukilteo, wa'],
+  mode: 'driving'
+}, 
+function (err, data){   
+  console.log(data[2])
+  //=>  { meters: 1022915, seconds: 35330, from: 'portland, or', to: 'san francisco, ca' }
+})
+```
+
+
 ## in the browser
 
 if you're using `map-distance` in the browser with browserify, including the google maps js library is optional. if it's not present when you call `distance()`, this module will load that library first.

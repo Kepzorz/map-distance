@@ -26,3 +26,14 @@ test("coordinate parsing", function(t) {
     t.ok(result.meters > 1250000 && result.meters < 1350000)
   })
 })
+
+test('distance matrices', function (t) {
+  t.plan(1)
+  distance({
+    from: ['seattle, wa', 'portland, or'],
+    to: ['san francisco, ca', 'mukilteo, wa'],
+    mode: 'driving'
+  }, function (err, data) {
+    t.assert(data[2].seconds > 34000 && data[2].seconds < 37000)
+  })
+})

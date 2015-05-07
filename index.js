@@ -11,7 +11,7 @@ var Distance = module.exports = function(args, callback) {
     return
   }
   var query = {origins: parse(args.from), destinations: parse(args.to), mode: args.mode || "driving"}
-  var responseHandler = require('./lib/handle-response.js')(callback)
+  var responseHandler = require('./lib/handle-response.js')(callback, args)
   request.get(baseUrl)
     .query(query)
     .end(function(response) {

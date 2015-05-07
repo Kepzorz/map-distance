@@ -1,7 +1,7 @@
 {
   "name": "map-distance",
   "description": "get google maps travel time/distance in browser or node",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "repository": {
     "url": "git://github.com/kepzorz/map-distance.git"
   },
